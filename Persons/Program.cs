@@ -10,7 +10,7 @@ namespace Persons
             
             for(int i = 0; i<5; i++)
             {
-                persons[i] = new Person(i, 20+i, "Lyusi", "Female");
+                persons[i] = new Person(i, 20+i, "Lyusi",15_000_000 ,"Female");
             }
 
             for (int i = 5; i<10; i++)
@@ -19,11 +19,12 @@ namespace Persons
             }
 
             Person olderPerson = Person.GetOlderPerson(persons[0], persons[9]);
+            
             olderPerson.DisplaInfo();
 
             int femalesCount = Person.CountFemalePersons(persons);
-            Console.WriteLine("Females count : "+ femalesCount);
 
+            Console.WriteLine("Females count : "+ femalesCount);
 
         }
     }

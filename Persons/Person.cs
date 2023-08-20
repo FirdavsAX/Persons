@@ -29,12 +29,20 @@ namespace Persons
         }
         public static int CountFemalePersons(Person[] persons)
         {
-            return persons.Where(x => x.Gender == " Female").ToList().Count;
+            int sum = 0;
+            foreach(Person human in persons)
+            {
+                if(human.Gender == "Female")
+                {
+                    sum++;
+                }
+            }
+            return sum;
         }
 
         public Person(int id, int age, string fullName, decimal salary, string gender)
         {
-            if (age < MaxAge)
+            if (age > MaxAge)
             {
                 return;
             }
